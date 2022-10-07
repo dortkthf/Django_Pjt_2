@@ -1,16 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner overflow-hidden">
+  <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{% static 'img/spiderman.jpg' %}" class="d-block w-100" alt="...">
+        <img src="{% static 'img/spiderman.jpg' %}" class="d-block w-100 h-auto" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://dummyimage.com/1920x600/000/fff.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="https://dummyimage.com/1920x600/000/fff.png" class="d-block w-100" alt="...">
+        <img src="{% static 'img/topgun.jpg' %}" class="d-block w-100" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -21,8 +18,5 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
-  <div class="container">
-    <h1 class='text-center my-3'>최신 영화</h1>
   </div>
 {% endblock %}
