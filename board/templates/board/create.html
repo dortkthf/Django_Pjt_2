@@ -3,16 +3,17 @@
 
 {% block content %}
 
+
+
+<div class="container">
   <h1>글작성 페이지</h1>
+  <form action="" method="POST">
+    {% csrf_token %}
 
-  <div class="container">
-    <form action="" method="POST">
-      {% csrf_token %}
-
-      {% bootstrap_form review_form %}
-      <div class="d-grid gap-2">
-        <input class="btn btn-primary" type="submit" value="작성">
-      </div>
-    </form>
-  </div>
+    {% bootstrap_form review_form %}
+    <div class="d-grid gap-2">
+      <input class="btn btn-primary" type="submit" value="작성">
+    </div>
+  </form>
+</div>
 {% endblock %}>
