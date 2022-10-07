@@ -1,25 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-  <h1 class='text-center mb-3'>홈화면 입니다.</h1>
+  <div class="container">
+    <h1 class='text-center mb-3 fw-bold'>홈화면 입니다</h1>
 
-  <table class="table table-hover mb-3">
-    <thead>
-
-      <tr>
-        <th scope="col">리뷰 제목</th>
-        <th scope="col">영화 이름</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for r in review %}
-      <tr onclick='location.href="{{ r.pk }}"' style='cursor: pointer;'>
-        <td>{{ r.title }}</td>
-        <td>{{ r.movie_name }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+    <table class="table table-hover mb-3">
+      <thead>
+        <tr>
+          <th scope="col">리뷰 제목</th>
+          <th scope="col">영화 이름</th>
+          <th scope="col">평점</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in review %}
+          <tr onclick='location.href="{{ r.pk }}"' style='cursor: pointer;'>
+            <td>{{ r.title }}</td>
+            <td>{{ r.movie_name }}</td>
+            <td>{{ r.grade }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 {% endblock %}
