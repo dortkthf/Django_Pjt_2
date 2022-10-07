@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="py-5">
+      <h3>{{review.movie_name}}
+        <span class="fs-6 text-end">평점:
+          {{review.grade}}점</span>
+      </h3>
+    </div>
+    <h1>제목:
+      {{review.title}}</h1>
+    <p>내용:
+      {{review.content}}</p>
+
+    수정
+    <a class="btn btn-outline-danger" href="{% url 'board:delete' review.pk %}">삭제</a>
+  </div>
+
+{% endblock %}
