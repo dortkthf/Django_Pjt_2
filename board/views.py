@@ -63,3 +63,7 @@ def update(request, pk):
     }
 
     return render(request, "board/update.html", context=context)
+
+
+def home(request):
+    return render(request,'board/home.html')

@@ -15,9 +15,9 @@
 </head>
 
 <body class='d-flex flex-column'>
-  <nav class="navbar navbar-expand-sm navbar-expand-lg">
+  <nav class="navbar navbar-expand-sm navbar-expand-lg sticky-top text-bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="{% url 'board:index' %}"><img src="{% static 'img/logo.png' %}" style='height: 3rem' class='mb-2'></a>
+      <a class="navbar-brand" href="{% url 'board:home' %}"><img src="{% static 'img/logo.png' %}" style='height: 3rem' class='mb-2'></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'board:index' %}">홈으로</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'board:index' %}">목록으로</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="{% url 'board:create' %}">작성</a>
@@ -39,7 +39,7 @@
   </div>
   <!-- JavaScript Bundle with Popper -->
   {% comment %} {% bootstrap_javascript %} {% endcomment %}
-  <footer class='fixed-bottom'>
+  <footer class='sticky-bottom text-bg-light'>
     <div class="container py-2">
       <p class='text-center mb-0'>Created By 이동현, 조승윤, 이준엽</p>
     </div>
